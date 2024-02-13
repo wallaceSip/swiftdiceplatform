@@ -5,10 +5,10 @@ import { PublicKey } from '@solana/web3.js'
 export const RPC_ENDPOINT = import.meta.env.VITE_RPC_ENDPOINT ?? "https://api.mainnet-beta.solana.com"
 
 // Change this value to your Solana address
-export const PLATFORM_CREATOR_ADDRESS = new PublicKey('V2grJiwjs25iJYqumbHyKo5MTK7SFqZSdmoRaj8QWb9')
+export const PLATFORM_CREATOR_ADDRESS = new PublicKey('ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L')
 
 // Appears in ShareModal
-export const PLATFORM_SHARABLE_URL = 'v2-play.gamba.so'
+export const PLATFORM_SHARABLE_URL = 'swiftdice.com'
 
 // List of tokens supported by this platform
 export const TOKENS: TokenMeta[] = [
