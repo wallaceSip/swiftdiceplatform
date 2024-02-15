@@ -31,7 +31,7 @@ export const GAMES: GameBundle[] = [
     meta: {
       name: 'Flip',
       description: `
-        Pick Heads or Tails. Double your money or go broke. Simple as.
+        Pick Heads or Tails. Double your money or go broke. Simple as that.
       `,
       image: '/games/flip.png',
       background: '#ffe694',
@@ -45,7 +45,7 @@ export const GAMES: GameBundle[] = [
       image: '/games/plinko.png',
       name: 'Plinko',
       description: `
-        Plinko
+        Plinko Game on Blockchain
       `,
     },
     app: React.lazy(() => import('./Plinko')),
@@ -79,7 +79,7 @@ export const GAMES: GameBundle[] = [
       name: 'Roulette',
       image: '/games/roulette.png',
       description: `
-        A miniature version of Roulette. WYSIWYG!
+        A miniature version of Roulette on the Blockchain!
       `,
       background: '#1de87e',
     },

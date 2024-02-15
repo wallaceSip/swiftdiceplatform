@@ -146,7 +146,7 @@ export default function HiLo(props: HiLoConfig) {
                     >
                       <Card>
                         <div className="rank">{RANK_SYMBOLS[card.rank]}</div>
-                        <div className="suit" style={{ backgroundImage: 'url(' + props.logo +  ')' }} />
+                        <div className="suit" style={{ backgroundImage: 'url(' + props.logo + ')' }} />
                       </Card>
                     </CardContainer>
                   )
@@ -160,7 +160,7 @@ export default function HiLo(props: HiLoConfig) {
                   onMouseLeave={() => hoverOption(undefined)}
                 >
                   <div>
-                    👆
+                    &#x2B06; {/* Green arrow up */}
                   </div>
                   <div>HI - ({Math.max(...betHi).toFixed(2)}x)</div>
                 </Option>
@@ -171,7 +171,7 @@ export default function HiLo(props: HiLoConfig) {
                   onMouseLeave={() => hoverOption(undefined)}
                 >
                   <div>
-                    👇
+                    &#x2B07; {/* Red arrow down */}
                   </div>
                   <div>LO - ({Math.max(...betLo).toFixed(2)}x)</div>
                 </Option>
