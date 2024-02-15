@@ -160,7 +160,7 @@ export default function HiLo(props: HiLoConfig) {
                   onMouseLeave={() => hoverOption(undefined)}
                 >
                   <div>
-                    &#x2B06; {/* Green arrow up */}
+                  <span style={{ color: 'green' }}>&#x2B06;</span> {/* Green arrow up */}
                   </div>
                   <div>HI - ({Math.max(...betHi).toFixed(2)}x)</div>
                 </Option>
@@ -171,7 +171,7 @@ export default function HiLo(props: HiLoConfig) {
                   onMouseLeave={() => hoverOption(undefined)}
                 >
                   <div>
-                    &#x2B07; {/* Red arrow down */}
+                  <span style={{ color: 'red' }}>&#x2B07;</span> {/* Red arrow down */}
                   </div>
                   <div>LO - ({Math.max(...betLo).toFixed(2)}x)</div>
                 </Option>
