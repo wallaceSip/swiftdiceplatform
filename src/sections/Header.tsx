@@ -71,7 +71,7 @@ export default function Header() {
         </Modal>
       )}
       <StyledHeader>
-        <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
           {isMobile ? (
             <Logo to="/">
               <img alt="SwiftDice mobile logo" src="/mobile-logo.svg" />
