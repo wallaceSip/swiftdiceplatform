@@ -5,7 +5,7 @@ export const GAMES: GameBundle[] = [
   {
     id: 'dice',
     meta: {
-      background: '#ff6490', // Gradient from pink to red
+      background: 'linear-gradient(to bottom right, #ff6490, #ff3366)', // Gradient from pink to red
       name: 'Dice',
       image: '/games/dice.png',
       description: `
@@ -17,7 +17,7 @@ export const GAMES: GameBundle[] = [
   {
     id: 'slots',
     meta: {
-      background: '#5465ff', // Gradient from blue to darker blue
+      background: 'linear-gradient(to bottom right, #5465ff, #3455ff)', // Gradient from blue to darker blue
       name: 'Slots',
       image: '/games/slots.png',
       description: `
@@ -34,14 +34,14 @@ export const GAMES: GameBundle[] = [
         Pick Heads or Tails. Double your money or go broke. Simple as that.
       `,
       image: '/games/flip.png',
-      background: '#ffe694', // Gradient from light yellow to gold
+      background: 'linear-gradient(to bottom right, #ffe694, #ffd700)', // Gradient from light yellow to gold
     },
     app: React.lazy(() => import('./Flip')),
   },
   {
     id: 'plinko',
     meta: {
-      background: '#7272ff', // Gradient from blue to darker blue
+      background: 'linear-gradient(to bottom right, #7272ff, #5a5aff)', // Gradient from blue to darker blue
       image: '/games/plinko.png',
       name: 'Plinko',
       description: `
@@ -56,7 +56,7 @@ export const GAMES: GameBundle[] = [
       name: 'HiLo',
       image: '/games/hilo.png',
       description: 'Guess if the next card is going to be higher or lower than the current one. Continue until you want to cash out!',
-      background: '#77bbff', // Gradient from light blue to darker blue
+      background: 'linear-gradient(to bottom right, #77bbff, #5aaaff)', // Gradient from light blue to darker blue
     },
     props: { logo: '/logo.svg' },
     app: React.lazy(() => import('./HiLo')),
@@ -81,7 +81,7 @@ export const GAMES: GameBundle[] = [
       description: `
         A miniature version of Roulette on the Blockchain!
       `,
-      background: '#1de87e', // Gradient from green to darker green
+      background: 'linear-gradient(to bottom right, #1de87e, #09c052)', // Gradient from green to darker green
     },
     app: React.lazy(() => import('./Roulette')),
   },
