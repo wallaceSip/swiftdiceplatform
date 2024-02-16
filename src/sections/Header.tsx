@@ -36,32 +36,14 @@ const StyledHeader = styled.div`
   left: 0;
   z-index: 1000;
   backdrop-filter: blur(20px);
-
-  @media (max-width: 560px) {
-    .mobile-logo {
-      display: block;
-    }
-
-    .desktop-logo {
-      display: none;
-    }
-  }
 `
 
 const Logo = styled(NavLink)`
-  height: 50px;
+  height: 55px;
   margin: 0 10px;
 
   & > img {
     height: 100%;
-  }
-
-  .mobile-logo {
-    display: none;
-  }
-
-  .desktop-logo {
-    display: block;
   }
 `
 
@@ -70,6 +52,7 @@ export default function Header() {
   const balance = useUserBalance()
   const [bonusHelp, setBonusHelp] = React.useState(false)
   const [jackpotHelp, setJackpotHelp] = React.useState(false)
+  const isMobile = window.innerWidth <= 560;
 
   return (
     <>
@@ -89,10 +72,15 @@ export default function Header() {
       )}
       <StyledHeader>
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
-          <Logo to="/">
-            <img alt="SwiftDice logo" className="desktop-logo" src="/logo.svg" />
-            <img alt="SwiftDice mobile logo" className="mobile-logo" src="/mobile-logo.svg" />
-          </Logo>
+          {isMobile ? (
+            <Logo to="/">
+              <img alt="SwiftDice mobile logo" src="/mobile-logo.svg" />
+            </Logo>
+          ) : (
+            <Logo to="/">
+              <img alt="SwiftDice desktop logo" src="/logo.svg" />
+            </Logo>
+          )}
         </div>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (
