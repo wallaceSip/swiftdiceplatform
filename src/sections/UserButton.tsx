@@ -11,6 +11,7 @@ function ConnectedButton() {
   const wallet = useWallet()
   const ref = React.useRef<HTMLDivElement>(null!)
   const address = useWalletAddress()
+  const isMobile = window.innerWidth <= 560;
 
   return (
     <>
@@ -25,14 +26,25 @@ function ConnectedButton() {
         </Modal>
       )}
       <div style={{ position: 'relative' }} ref={ref}>
-        <GambaUi.Button
-          onClick={() => setModal(true)}
-        >
-          <div style={{display: 'flex', gap: '.5em', alignItems: 'center'}}>
-            <img src={wallet.wallet?.adapter.icon} height="20px" />
-            {truncateString(address.toBase58(), 3)}
-          </div>
-        </GambaUi.Button>
+        {isMobile ? (
+          <GambaUi.Button
+            onClick={() => setModal(true)}
+          >
+            <div style={{ display: 'flex', gap: '.3em', alignItems: 'center' }}>
+              <img src={wallet.wallet?.adapter.icon} height="15px" />
+              {truncateString(address.toBase58(), 2)}
+            </div>
+          </GambaUi.Button>
+        ) : (
+          <GambaUi.Button
+            onClick={() => setModal(true)}
+          >
+            <div style={{ display: 'flex', gap: '.5em', alignItems: 'center' }}>
+              <img src={wallet.wallet?.adapter.icon} height="20px" />
+              {truncateString(address.toBase58(), 3)}
+            </div>
+          </GambaUi.Button>
+        )}
       </div>
     </>
   )
