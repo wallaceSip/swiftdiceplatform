@@ -3,9 +3,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { WelcomeBanner } from '../sections/Dashboard/WelcomeBanner';
+import { TokenListingBanner } from '../sections/Dashboard/NewBanner';
 
 const banners = [
-  <WelcomeBanner key={1} />
+  <><WelcomeBanner key={1} /><TokenListingBanner key={2} /></>
 ];
 
 const settings = {

@@ -66,8 +66,8 @@ export default function Header() {
       )}
       {jackpotHelp && (
         <Modal onClose={() => setJackpotHelp(false)}>
-          <h1>Jackpot</h1>
-          <p>There{'\''}s <TokenValue amount={pool.jackpotBalance} /> in the Jackpot.</p>
+          <h1>🏆 Jackpot</h1>
+          <p>There{'\''}s <TokenValue amount={pool.jackpotBalance} /> in the Jackpot.The Jackpot accumulates everytime a bet is made,every coin has its own Jackpot and you have a chance to get it wherever you make a new bet. Good Luck ! 🍀</p>
         </Modal>
       )}
       <StyledHeader>
@@ -85,7 +85,7 @@ export default function Header() {
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
           {pool.jackpotBalance > 0 && (
             <Bonus onClick={() => setJackpotHelp(true)}>
-              <TokenValue amount={pool.jackpotBalance} />
+             🏆<TokenValue amount={pool.jackpotBalance} />
             </Bonus>
           )}
           {balance.bonusBalance > 0 && (

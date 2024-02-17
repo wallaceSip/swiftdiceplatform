@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import mascotImage from '../../../public/mascot.png';
 
+// Define keyframe for fade-in animation
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -11,8 +11,12 @@ const fadeIn = keyframes`
   }
 `;
 
+// Styled component for the banner container
 const BannerContainer = styled.div`
-  background: linear-gradient(to right, #4f004f, #760076, #4f004f);
+  background: linear-gradient(to right, #4f004f, #760076, #4f004f),
+              url('/assets/brazilbanner.jpg');
+  background-size: cover;
+  background-position: center;
   border-radius: 20px;
   padding: 40px;
   position: relative;
@@ -29,16 +33,7 @@ const BannerContainer = styled.div`
   }
 `;
 
-const Mascot = styled.img`
-  width: 250px;
-  height: auto;
-  margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    margin-bottom: 10px;
-  }
-`;
-
+// Styled component for the text container
 const TextContainer = styled.div`
   flex: 1;
   text-align: center;
@@ -49,6 +44,7 @@ const TextContainer = styled.div`
   }
 `;
 
+// Styled components for title, description, and buttons remain the same
 const Title = styled.h1`
   font-size: 24px;
   margin-bottom: 10px;
@@ -103,24 +99,17 @@ const Buttons = styled.div`
   }
 `;
 
-export function WelcomeBanner() {
+export function TokenListingBanner() {
   return (
     <BannerContainer>
-      <Mascot src={mascotImage} alt="Mascot" />
       <TextContainer>
-        <Title>Welcome to SwiftDice Casino 👋</Title>
+        <Title>New Token Listings Announcement 🚀</Title>
         <Description>
-          Experience a fair and decentralized casino on Solana, brought to you by the creators of SwiftCash.
+          We have just Listed BRZ (Brazilian Coin) as a play token!
         </Description>
         <Buttons>
-          <button onClick={() => window.open('https://v2.gamba.so/', '_blank')}>
-            🚀 Add Liquidity
-          </button>
-          <button onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
-            💬 Telegram
-          </button>
-          <button onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
-            X.com
+          <button onClick={() => window.open('https://example.com', '_blank')}>
+            Learn More
           </button>
         </Buttons>
       </TextContainer>
