@@ -14,7 +14,7 @@ const fadeIn = keyframes`
 
 // Styled component for the banner container
 const BannerContainer = styled.div`
-  background-image: ${Background} /* Fix: Change background-url to background-image */
+  background-image: url(${Background});
   background-size: cover;
   background-position: center;
   border-radius: 20px;
