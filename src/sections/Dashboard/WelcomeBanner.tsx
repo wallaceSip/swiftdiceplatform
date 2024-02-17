@@ -21,12 +21,22 @@ const BannerContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   animation: ${fadeIn} 0.8s ease forwards;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 `;
 
 const Mascot = styled.img`
   width: 250px;
   height: auto;
-  margin-right: 40px;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 
 const TextContainer = styled.div`
