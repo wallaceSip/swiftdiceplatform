@@ -19,7 +19,7 @@ const BannerContainer = styled.div`
   overflow: hidden;
   animation: ${fadeIn} 0.8s ease forwards;
   height: 441px; /* Set a fixed height for all banners */
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -52,7 +52,10 @@ const Background = styled.div`
 
 // Styled component for the text container
 const TextContainer = styled.div`
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2; /* Ensure the text is above the dark layer */
   padding: 40px;
   color: white;
