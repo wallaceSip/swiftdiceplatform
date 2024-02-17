@@ -13,7 +13,7 @@ const fadeIn = keyframes`
 
 // Styled component for the banner container
 const BannerContainer = styled.div`
-  background: url('/assets/brazilbanner.jpg');
+  background-image: url('./assets/brazilbanner.jpg'); /* Fix: Change background-url to background-image */
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -25,13 +25,12 @@ const BannerContainer = styled.div`
   justify-content: space-between;
   animation: ${fadeIn} 0.8s ease forwards;
   min-height: 350px;
-  
+
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
-
 `;
 
 
@@ -81,7 +80,7 @@ const Buttons = styled.div`
   & > button {
     border: none;
     border-radius: 15px;
-    padding: 8px 16px;
+    padding: 10px 20px; /* Increase padding for the button */
     background: #333;
     color: white;
     cursor: pointer;
@@ -90,13 +89,14 @@ const Buttons = styled.div`
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center; /* Center align the button text */
     &:hover {
       background: #555;
     }
 
     @media (max-width: 768px) {
       font-size: 12px;
-      padding: 6px 12px;
+      padding: 8px 16px; /* Adjust padding for mobile */
     }
   }
 `;
