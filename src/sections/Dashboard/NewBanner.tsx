@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import Background from './assets/brazilbanner.jpg';
+import BackgroundImage from './assets/brazilbanner.jpg'; // Assuming './assets/brazilbanner.jpg' is the correct path to your image
 
 // Define keyframe for fade-in animation
 const fadeIn = keyframes`
@@ -14,35 +14,51 @@ const fadeIn = keyframes`
 
 // Styled component for the banner container
 const BannerContainer = styled.div`
-  background-image: url(${Background});
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  padding: 40px;
   position: relative;
+  border-radius: 20px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   animation: ${fadeIn} 0.8s ease forwards;
-  min-height: 350px;
+  height: 441px; /* Set a fixed height for all banners */
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark layer */
+    z-index: 1;
+  }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    border-radius: 0; /* Remove border radius for mobile */
+    min-height: 350px; /* Set a minimum height for mobile */
   }
 `;
 
+// Styled component for the background image
+const Background = styled.div`
+  background-image: url(${BackgroundImage});
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+`;
 
 // Styled component for the text container
 const TextContainer = styled.div`
-  flex: 1;
-  text-align: center;
+  position: relative;
+  z-index: 2; /* Ensure the text is above the dark layer */
+  padding: 40px;
+  color: white;
 
   @media (max-width: 768px) {
-    width: 100%;
-    padding: 0 20px;
+    padding: 20px;
   }
 `;
 
@@ -50,7 +66,6 @@ const TextContainer = styled.div`
 const Title = styled.h1`
   font-size: 24px;
   margin-bottom: 10px;
-  color: white;
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -60,7 +75,6 @@ const Title = styled.h1`
 
 const Description = styled.p`
   font-size: 16px;
-  color: white;
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
@@ -81,7 +95,7 @@ const Buttons = styled.div`
   & > button {
     border: none;
     border-radius: 15px;
-    padding: 10px 20px; /* Increase padding for the button */
+    padding: 10px 20px;
     background: #333;
     color: white;
     cursor: pointer;
@@ -90,7 +104,7 @@ const Buttons = styled.div`
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-align: center; /* Center align the button text */
+    text-align: center;
     justify-content: center;
     &:hover {
       background: #555;
@@ -98,7 +112,7 @@ const Buttons = styled.div`
 
     @media (max-width: 768px) {
       font-size: 12px;
-      padding: 8px 16px; /* Adjust padding for mobile */
+      padding: 8px 16px;
     }
   }
 `;
@@ -106,6 +120,7 @@ const Buttons = styled.div`
 export function TokenListingBanner() {
   return (
     <BannerContainer>
+      <Background />
       <TextContainer>
         <Title>New Token Listings Announcement 🚀</Title>
         <Description>

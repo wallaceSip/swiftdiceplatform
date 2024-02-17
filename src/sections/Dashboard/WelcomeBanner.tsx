@@ -17,6 +17,7 @@ const BannerContainer = styled.div`
   padding: 40px;
   position: relative;
   overflow: hidden;
+  height: 441px; /* Set a fixed height for all banners */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,6 +27,7 @@ const BannerContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    min-height: 350px; /* Set a minimum height for mobile */
   }
 
 `;
