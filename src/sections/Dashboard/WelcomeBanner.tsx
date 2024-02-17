@@ -19,27 +19,28 @@ const BannerContainer = styled.div`
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
   animation: ${fadeIn} 0.8s ease forwards;
 `;
 
 const Mascot = styled.img`
-  width: 200px;
+  width: 250px;
   height: auto;
-  margin-bottom: 30px;
+  margin-right: 40px;
+`;
+
+const TextContainer = styled.div`
+  flex: 1;
 `;
 
 const Title = styled.h1`
   font-size: 36px;
   margin-bottom: 20px;
   color: white;
-  text-align: center;
 `;
 
 const Description = styled.p`
   font-size: 20px;
-  text-align: center;
   color: white;
 `;
 
@@ -56,6 +57,10 @@ const Buttons = styled.div`
     color: white;
     cursor: pointer;
     transition: background .2s ease;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     &:hover {
       background: #555;
     }
@@ -66,21 +71,23 @@ export function WelcomeBanner() {
   return (
     <BannerContainer>
       <Mascot src={mascotImage} alt="Mascot" />
-      <Title>Welcome to SwiftDice Casino 👋</Title>
-      <Description>
-        Experience a fair and decentralized casino on Solana, brought to you by the creators of SwiftCash.
-      </Description>
-      <Buttons>
-        <button onClick={() => window.open('https://v2.gamba.so/', '_blank')}>
-          🚀 Add Liquidity
-        </button>
-        <button onClick={() => window.open('https://t.me/YourTelegramAccount', '_blank')}>
-          💬 Telegram
-        </button>
-        <button onClick={() => window.open('https://twitter.com/YourTwitterAccount', '_blank')}>
-          🐦 Twitter
-        </button>
-      </Buttons>
+      <TextContainer>
+        <Title>Welcome to SwiftDice Casino 👋</Title>
+        <Description>
+          Experience a fair and decentralized casino on Solana, brought to you by the creators of SwiftCash.
+        </Description>
+        <Buttons>
+          <button onClick={() => window.open('https://v2.gamba.so/', '_blank')}>
+            🚀 Add Liquidity
+          </button>
+          <button onClick={() => window.open('https://t.me/YourTelegramAccount', '_blank')}>
+            💬 Telegram
+          </button>
+          <button onClick={() => window.open('https://twitter.com/YourTwitterAccount', '_blank')}>
+            🐦 Twitter
+          </button>
+        </Buttons>
+      </TextContainer>
     </BannerContainer>
   );
 }
