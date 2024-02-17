@@ -21,19 +21,13 @@ const BannerContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   animation: ${fadeIn} 0.8s ease forwards;
-
+  min-height: 350px;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 392px; /* Set the width for mobile */
-    height: 441px; /* Set the height for mobile */
   }
 
-  @media (min-width: 769px) {
-    width: 1060px; /* Set the width for desktop */
-    height: 350px; /* Set the height for desktop */
-  }
 `;
 
 const Mascot = styled.img`
