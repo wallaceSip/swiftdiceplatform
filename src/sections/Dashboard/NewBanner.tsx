@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import Background from './assets/brazilbanner.jpg';
 
 // Define keyframe for fade-in animation
 const fadeIn = keyframes`
@@ -13,7 +14,7 @@ const fadeIn = keyframes`
 
 // Styled component for the banner container
 const BannerContainer = styled.div`
-  background-image: url('./assets/brazilbanner.jpg'); /* Fix: Change background-url to background-image */
+  background-image: ${Background} /* Fix: Change background-url to background-image */
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -90,6 +91,7 @@ const Buttons = styled.div`
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center; /* Center align the button text */
+    justify-content: center;
     &:hover {
       background: #555;
     }
