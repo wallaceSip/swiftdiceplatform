@@ -10,7 +10,7 @@ const banners = [
 
 const settings = {
   dots: true,
-  infinite: true,
+  infinite: banners.length > 1, // Set infinite to true only if there's more than 1 banner
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -21,11 +21,17 @@ const settings = {
 export function NewsCarousel() {
   return (
     <Slider {...settings}>
-      {banners.map((banner, index) => (
-        <div key={index}>
-          {banner}
+      {banners.length === 1 ? (
+        <div>
+          {banners[0]}
         </div>
-      ))}
+      ) : (
+        banners.map((banner, index) => (
+          <div key={index}>
+            {banner}
+          </div>
+        ))
+      )}
     </Slider>
   );
 }
