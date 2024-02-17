@@ -12,7 +12,7 @@ const fadeIn = keyframes`
 `;
 
 const BannerContainer = styled.div`
-  background: linear-gradient(to right, #FF2400, #FF8C00, #EDFF21);
+  background: linear-gradient(to right, #4f004f, #760076, #4f004f);
   border-radius: 20px;
   padding: 40px;
   position: relative;
@@ -25,19 +25,20 @@ const BannerContainer = styled.div`
 `;
 
 const Mascot = styled.img`
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-bottom: 30px;
 `;
 
 const Title = styled.h1`
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 20px;
   color: white;
+  text-align: center;
 `;
 
 const Description = styled.p`
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   color: white;
 `;
@@ -51,12 +52,12 @@ const Buttons = styled.div`
     border: none;
     border-radius: 15px;
     padding: 12px 24px;
-    background: #ffffffdf;
-    color: black;
+    background: #333;
+    color: white;
     cursor: pointer;
     transition: background .2s ease;
     &:hover {
-      background: #ffffffaf;
+      background: #555;
     }
   }
 `;
