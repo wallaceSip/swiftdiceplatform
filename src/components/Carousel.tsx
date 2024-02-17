@@ -5,34 +5,29 @@ import 'slick-carousel/slick/slick-theme.css';
 import { WelcomeBanner } from '../sections/Dashboard/WelcomeBanner';
 import { TokenListingBanner } from '../sections/Dashboard/NewBanner';
 
-const banners = [
-  <><WelcomeBanner key={1} /><TokenListingBanner key={2} /></>
-];
-
-const settings = {
-  dots: true,
-  infinite: banners.length > 1, // Set infinite to true only if there's more than 1 banner
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 5000, // Adjust as needed
-};
-
 export function NewsCarousel() {
+  const banners = [
+    <WelcomeBanner key={1} />,
+    <TokenListingBanner key={2} />,
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: banners.length > 1,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
+
   return (
     <Slider {...settings}>
-      {banners.length === 1 ? (
-        <div>
-          {banners[0]}
+      {banners.map((banner, index) => (
+        <div key={index}>
+          {banner}
         </div>
-      ) : (
-        banners.map((banner, index) => (
-          <div key={index}>
-            {banner}
-          </div>
-        ))
-      )}
+      ))}
     </Slider>
   );
 }
