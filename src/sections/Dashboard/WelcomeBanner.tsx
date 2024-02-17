@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import mascotImage from '../../../public/mascot.png';
 
 const BannerContainer = styled.div`
   background: linear-gradient(to right, #FF2400, #FF8C00, #EDFF21);
@@ -40,7 +41,7 @@ const Buttons = styled.div`
 export function WelcomeBanner() {
   return (
     <BannerContainer>
-      <Mascot src="/mascot.png" alt="Mascot" />
+      <Mascot src={mascotImage} alt="Mascot" />
       <h1>Welcome SwiftDice Casino 👋</h1>
       <p>
         A fair and decentralized casino on Solana. By the creators of SwiftCash.
