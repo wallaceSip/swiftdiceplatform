@@ -43,13 +43,13 @@ const BannerContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 250px; /* Set the width for mobile */
-    height: 150px; /* Set the height for mobile */
+    width: 392px; /* Set the width for mobile */
+    height: 441px; /* Set the height for mobile */
   }
 
   @media (min-width: 769px) {
-    width: 300px; /* Set the width for desktop */
-    height: 200px; /* Set the height for desktop */
+    width: 1060px; /* Set the width for desktop */
+    height: 350px; /* Set the height for desktop */
   }
 `;
 
