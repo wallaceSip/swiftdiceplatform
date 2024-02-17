@@ -32,47 +32,73 @@ const BannerContainer = styled.div`
 const Mascot = styled.img`
   width: 250px;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 `;
 
 const TextContainer = styled.div`
   flex: 1;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 20px;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
 `;
 
 const Description = styled.p`
-  font-size: 20px;
+  font-size: 16px;
   color: white;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 `;
 
 const Buttons = styled.div`
   display: flex;
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
+
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 
   & > button {
     border: none;
     border-radius: 15px;
-    padding: 12px 24px;
+    padding: 8px 16px;
     background: #333;
     color: white;
     cursor: pointer;
     transition: background .2s ease;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     &:hover {
       background: #555;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      padding: 6px 12px;
     }
   }
 `;
