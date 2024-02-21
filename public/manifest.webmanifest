@@ -1,12 +1,12 @@
 {
-	"name": "Gamba Play",
-	"short_name": "Gamba",
+	"name": "SwiftDice Casino",
+	"short_name": "SwiftDice",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#000000",
 	"lang": "en",
 	"scope": "/",
-	"theme_color": "#FF5555",
+	"theme_color": "#D91141",
 	"description": "",
 	"icons": [
 		{
