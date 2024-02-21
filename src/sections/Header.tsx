@@ -54,7 +54,7 @@ const Logo = styled(NavLink)`
 
 const Row = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 6px;
   align-items: center;
 `
 
@@ -90,7 +90,7 @@ export default function Header() {
         <Row>
           {pool.jackpotBalance > 0 && (
             <Bonus onClick={() => setJackpotHelp(true)}>
-             🏆<TokenValue amount={pool.jackpotBalance} />
+             <TokenValue amount={pool.jackpotBalance} />
             </Bonus>
           )}
           {balance.bonusBalance > 0 && (
