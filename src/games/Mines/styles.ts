@@ -52,6 +52,7 @@ const hoverPulse = keyframes`
 `
 
 export const Container2 = styled.div`
+  margin-top: 5px;
   display: grid;
   grid-template-rows: auto auto 1fr;
   height: 100%;
