@@ -11,66 +11,11 @@ const fadeIn = keyframes`
   }
 `;
 
-const Container = styled.div`
-  border-radius: 20px;
-  padding: 40px;
-  position: relative;
-  overflow: hidden;
-  height: 441px; /* Set a fixed height for all banners */
+const CenteredContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  animation: ${fadeIn} 0.8s ease forwards;
-  min-height: 350px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    min-height: 350px; /* Set a minimum height for mobile */
-  }
+  justify-content: center;
 `;
 
-const Mascot = styled.img`
-  width: 250px;
-  height: auto;
-  margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    margin-bottom: 10px;
-  }
-`;
-
-const TextContainer = styled.div`
-  flex: 1;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 0 20px;
-  }
-`;
-
-const Title = styled.h1`
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: white;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-`;
-
-const Description = styled.p`
-  font-size: 16px;
-  color: white;
-  margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-`;
 
 const Buttons = styled.div`
   display: flex;
@@ -106,21 +51,19 @@ const Buttons = styled.div`
 
 function MainPage() {
   return (
-    <Container>
-      <TextContainer>
-        <Buttons>
-          <button onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
-            Explorer
-          </button>
-          <button onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
-            Telegram
-          </button>
-          <button onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
-            X.com
-          </button>
-        </Buttons>
-      </TextContainer>
-    </Container>
+    <CenteredContainer>
+      <Buttons>
+        <button onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
+          Explorer
+        </button>
+        <button onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
+          Telegram
+        </button>
+        <button onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
+          X.com
+        </button>
+      </Buttons>
+    </CenteredContainer>
   );
 }
 
