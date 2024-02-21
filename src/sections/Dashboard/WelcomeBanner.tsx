@@ -11,9 +11,17 @@ const fadeIn = keyframes`
   }
 `;
 
+const darken = keyframes`
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+`;
+
 const BannerContainer = styled.div`
-  background: linear-gradient(to right, #4f004f, #760076, #4f004f),
-              url(${mascotImage}) center/cover no-repeat; /* Add background image */
+  background: linear-gradient(to right, #4f004f, #760076, #4f004f);
   border-radius: 20px;
   padding: 40px;
   position: relative;
@@ -30,17 +38,15 @@ const BannerContainer = styled.div`
     padding: 20px;
     min-height: 350px; /* Set a minimum height for mobile */
   }
-
-  /* Darken effect */
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for desired darkness */
-    z-index: 1;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    animation: ${darken} 0.8s ease forwards;
   }
 `;
 
@@ -48,6 +54,8 @@ const Mascot = styled.img`
   width: 250px;
   height: auto;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 2; /* Ensure mascot appears above the darken effect */
 
   @media (max-width: 768px) {
     margin-bottom: 10px;
@@ -57,6 +65,7 @@ const Mascot = styled.img`
 const TextContainer = styled.div`
   flex: 1;
   text-align: center;
+  z-index: 1; /* Ensure text appears above the darken effect */
 
   @media (max-width: 768px) {
     width: 100%;
@@ -83,38 +92,6 @@ const Description = styled.p`
   @media (max-width: 768px) {
     font-size: 14px;
     margin-bottom: 10px;
-  }
-`;
-
-const Buttons = styled.div`
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-
-  @media (max-width: 768px) {
-    margin-top: 10px;
-  }
-
-  & > button {
-    border: none;
-    border-radius: 15px;
-    padding: 8px 16px;
-    background: #333;
-    color: white;
-    cursor: pointer;
-    transition: background .2s ease;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    &:hover {
-      background: #555;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 12px;
-      padding: 6px 12px;
-    }
   }
 `;
 

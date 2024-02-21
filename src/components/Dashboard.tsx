@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import mascotImage from '../../public/mascot.png';
 
 const fadeIn = keyframes`
   from {
@@ -11,30 +10,18 @@ const fadeIn = keyframes`
   }
 `;
 
+const darken = keyframes`
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+`;
+
 const CenteredContainer = styled.div`
   display: flex;
   justify-content: center;
-`;
-
-
-const TransparentButton = styled.button`
-  border: 2px solid #D91141;
-  border-radius: 15px;
-  padding: 8px 16px;
-  background: transparent;
-  color: #D91141;
-  cursor: pointer;
-  transition: background .2s ease, color .2s ease;
-
-  &:hover {
-    background: #D91141;
-    color: white;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
 `;
 
 const Buttons = styled.div`
@@ -47,10 +34,10 @@ const Buttons = styled.div`
   }
 
   & > button {
-    border: none;
+    border: 2px solid #D91141; /* Add border with desired color */
     border-radius: 15px;
     padding: 8px 16px;
-    background: #333;
+    background: transparent; /* Set background to transparent */
     color: white;
     cursor: pointer;
     transition: background .2s ease;
@@ -59,7 +46,7 @@ const Buttons = styled.div`
     text-transform: uppercase;
     letter-spacing: 1px;
     &:hover {
-      background: #555;
+      background: #D91141; /* Change background color on hover */
     }
 
     @media (max-width: 768px) {
@@ -73,15 +60,15 @@ function MainPage() {
   return (
     <CenteredContainer>
       <Buttons>
-        <TransparentButton onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
+        <button onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
           Explorer
-        </TransparentButton>
-        <TransparentButton onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
+        </button>
+        <button onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
           Telegram
-        </TransparentButton>
-        <TransparentButton onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
+        </button>
+        <button onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
           X.com
-        </TransparentButton>
+        </button>
       </Buttons>
     </CenteredContainer>
   );
