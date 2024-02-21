@@ -24,8 +24,7 @@ const Bonus = styled.button`
 
 const StyledHeader = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
   padding: 10px;
   background: rgba(33, 34, 51, 0.9);
@@ -36,6 +35,12 @@ const StyledHeader = styled.div`
   left: 0;
   z-index: 1000;
   backdrop-filter: blur(20px);
+
+  @media (min-width: 561px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
 
 const Logo = styled(NavLink)`
@@ -45,6 +50,12 @@ const Logo = styled(NavLink)`
   & > img {
     height: 100%;
   }
+`
+
+const Row = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
 `
 
 export default function Header() {
@@ -71,18 +82,12 @@ export default function Header() {
         </Modal>
       )}
       <StyledHeader>
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          {isMobile ? (
-            <Logo to="/">
-              <img alt="SwiftDice mobile logo" src="/mobile-logo.svg" />
-            </Logo>
-          ) : (
-            <Logo to="/">
+        <Row>
+          <Logo to="/">
               <img alt="SwiftDice desktop logo" src="/logo.svg" />
-            </Logo>
-          )}
-        </div>
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative' }}>
+          </Logo>
+        </Row>
+        <Row>
           {pool.jackpotBalance > 0 && (
             <Bonus onClick={() => setJackpotHelp(true)}>
              🏆<TokenValue amount={pool.jackpotBalance} />
@@ -95,7 +100,7 @@ export default function Header() {
           )}
           <TokenSelect />
           <UserButton />
-        </div>
+        </Row>
       </StyledHeader>
     </>
   )
