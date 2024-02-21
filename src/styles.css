@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Early Warning';
+  src: url('./fonts/earlywarning.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,7 +26,7 @@
 }
 
 body, input, button, textarea, pre {
-  font-family: 'Azonix', 'Early Warning', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Early Warning', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
 }
 

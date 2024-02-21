@@ -116,11 +116,11 @@ export function WelcomeBanner() {
           Experience a fair and decentralized casino on Solana, brought to you by the creators of SwiftCash.
         </Description>
         <Buttons>
-          <button onClick={() => window.open('https://v2.gamba.so/', '_blank')}>
-            🚀 Add Liquidity
+          <button onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
+            Explorer
           </button>
           <button onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
-            💬 Telegram
+            Telegram
           </button>
           <button onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
             X.com
