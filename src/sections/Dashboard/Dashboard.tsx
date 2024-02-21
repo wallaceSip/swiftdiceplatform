@@ -49,7 +49,7 @@ export default function Dashboard() {
     <>
       <MainPage />
       <NewsCarousel />
-      <img src={gambleAware} alt="Gamble Aware" />
+      <img style={{ textAlign: 'center' }} src={gambleAware} alt="Gamble Aware" width={350} />
       <h1 style={{ textAlign: 'center' }}>GAMES</h1>
       <GameGrid />
     </>

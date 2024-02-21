@@ -111,21 +111,10 @@ export function WelcomeBanner() {
     <BannerContainer>
       <Mascot src={mascotImage} alt="Mascot" />
       <TextContainer>
-        <Title>Welcome to SwiftDice Casino 👋</Title>
+        <Title>Welcome to SwiftDice Casino</Title>
         <Description>
-          Experience a fair and decentralized casino on Solana, brought to you by the creators of SwiftCash.
+          Discover a transparent and decentralized casino experience on Solana, where participants can generate income by contributing to a shared liquidity pool.
         </Description>
-        <Buttons>
-          <button onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
-            Explorer
-          </button>
-          <button onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
-            Telegram
-          </button>
-          <button onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
-            X.com
-          </button>
-        </Buttons>
       </TextContainer>
     </BannerContainer>
   );

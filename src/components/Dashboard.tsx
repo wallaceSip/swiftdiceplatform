@@ -107,12 +107,7 @@ const Buttons = styled.div`
 function MainPage() {
   return (
     <Container>
-      <Mascot src={mascotImage} alt="Mascot" />
       <TextContainer>
-        <Title>Welcome to SwiftDice Casino</Title>
-        <Description>
-          Experience a fair and decentralized casino on Solana, brought to you by the creators of SwiftCash.
-        </Description>
         <Buttons>
           <button onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
             Explorer
