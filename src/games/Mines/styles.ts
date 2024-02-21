@@ -75,6 +75,9 @@ export const Grid = styled.div`
   gap: 8px;
 `
 
+export const margintop = styled.div`
+margin-top: 50px;
+`
 export const Levels = styled.div`
   border-radius: 5px;
   color: gray;
