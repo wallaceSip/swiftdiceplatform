@@ -4,6 +4,8 @@ import { SlideSection } from '../../components/Slider'
 import { GAMES } from '../../games'
 import { GameCard } from './GameCard'
 import { NewsCarousel } from '../../components/Carousel'
+import gambleAware  from '../../../public/gambleaware.png'
+import MainPage from '../../components/Dashboard'
 
 export function GameSlider() {
   return (
@@ -45,7 +47,9 @@ export function GameGrid() {
 export default function Dashboard() {
   return (
     <>
+      <MainPage />
       <NewsCarousel />
+      <img src={gambleAware} alt="Gamble Aware" />
       <h1 style={{ textAlign: 'center' }}>GAMES</h1>
       <GameGrid />
     </>

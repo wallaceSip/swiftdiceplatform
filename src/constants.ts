@@ -13,7 +13,7 @@ export const PLATFORM_SHARABLE_URL = 'swiftdice.com'
 // List of tokens supported by this platform
 export const TOKENS: TokenMeta[] = [
   GambaStandardTokens.sol,
-  GambaStandardTokens.usdc,
+  GambaStandardTokens.usdc
   // {
   //   mint: new PublicKey(""),
   //   symbol: '???',
