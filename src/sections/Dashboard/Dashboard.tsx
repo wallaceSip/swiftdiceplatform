@@ -50,7 +50,7 @@ export default function Dashboard() {
       <MainPage />
       <NewsCarousel />
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <img src={gambleAware} alt="Gamble Aware" width={350} />
+        <img src={gambleAware} alt="Gamble Aware" width={300} />
       </div>
       <h1 style={{ textAlign: 'center' }}>GAMES</h1>
       <GameGrid />

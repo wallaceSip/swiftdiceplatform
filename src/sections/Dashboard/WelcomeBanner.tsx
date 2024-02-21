@@ -12,7 +12,8 @@ const fadeIn = keyframes`
 `;
 
 const BannerContainer = styled.div`
-  background: linear-gradient(to right, #4f004f, #760076, #4f004f);
+  background: linear-gradient(to right, #4f004f, #760076, #4f004f),
+              url(${mascotImage}) center/cover no-repeat; /* Add background image */
   border-radius: 20px;
   padding: 40px;
   position: relative;
@@ -30,6 +31,17 @@ const BannerContainer = styled.div`
     min-height: 350px; /* Set a minimum height for mobile */
   }
 
+  /* Darken effect */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for desired darkness */
+    z-index: 1;
+  }
 `;
 
 const Mascot = styled.img`

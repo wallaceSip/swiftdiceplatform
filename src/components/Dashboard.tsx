@@ -17,13 +17,33 @@ const CenteredContainer = styled.div`
 `;
 
 
+const TransparentButton = styled.button`
+  border: 2px solid #D91141;
+  border-radius: 15px;
+  padding: 8px 16px;
+  background: transparent;
+  color: #D91141;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+
+  &:hover {
+    background: #D91141;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+`;
+
 const Buttons = styled.div`
   display: flex;
   gap: 20px;
   margin-top: 20px;
 
   @media (max-width: 768px) {
-    margin-top: 10px;
+    margin-top: 50px;
   }
 
   & > button {
@@ -53,15 +73,15 @@ function MainPage() {
   return (
     <CenteredContainer>
       <Buttons>
-        <button onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
+        <TransparentButton onClick={() => window.open('https://explorer.gamba.so/platform/ES124JMpsdWZzVEjvcFCBjq4W1AwNU336xZzD5fZ833L', '_blank')}>
           Explorer
-        </button>
-        <button onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
+        </TransparentButton>
+        <TransparentButton onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
           Telegram
-        </button>
-        <button onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
+        </TransparentButton>
+        <TransparentButton onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
           X.com
-        </button>
+        </TransparentButton>
       </Buttons>
     </CenteredContainer>
   );
