@@ -10,7 +10,7 @@
 :root {
   --background-color: #0b0b0e;
   --text-color: #ffffff;
-
+  --padding: 5px !important;
   --gamba-ui-border-radius: 20px;
 
   --gamba-ui-button-default-background: linear-gradient(to right, #7e0000, #cb0f0f); /* Gradient for default button background */
