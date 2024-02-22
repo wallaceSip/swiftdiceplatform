@@ -8,7 +8,6 @@ const StyledToken = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 5px !important;
   img {
     height: 20px;
   }
@@ -47,14 +46,14 @@ export default function TokenSelect() {
 
   return (
     <div style={{ position: 'relative' }}>
-      <GambaUi.Button onClick={click}>
+       <button className='styledButton' onClick={click}>
         {selectedToken && (
           <StyledToken>
             <TokenImage src={selectedToken.image} />
             <TokenValue amount={balance.balance} />
           </StyledToken>
         )}
-      </GambaUi.Button>
+      </button>
       <Dropdown visible={visible}>
         {tokenList.map((x, i) => (
           <StyledTokenButton onClick={() => setToken(x.mint)} key={i}>

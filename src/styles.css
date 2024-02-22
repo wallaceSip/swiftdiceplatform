@@ -64,3 +64,17 @@ body::-webkit-scrollbar-thumb {
   background: rgb(55, 57, 82);
   border-radius: 10px;
 }
+
+.styledButton {
+  --background-color: var(--gamba-ui-button-default-background);
+  --background-color-hover: var(--gamba-ui-button-default-background);
+  --padding: 5px;
+  background: var(--background-color);
+  color: white;
+  border: none;
+  border-radius: var(--gamba-ui-border-radius);
+  padding: var(--padding);
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+}

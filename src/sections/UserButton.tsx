@@ -20,30 +20,30 @@ function ConnectedButton() {
           <h1>
             {truncateString(address.toBase58(), 6, 3)}
           </h1>
-          <GambaUi.Button onClick={() => wallet.disconnect()}>
+          <button className='styledButton' onClick={() => wallet.disconnect()}>
             Disconnect
-          </GambaUi.Button>
+          </button>
         </Modal>
       )}
       <div style={{ position: 'relative' }} ref={ref}>
         {isMobile ? (
-          <GambaUi.Button
+           <button className='styledButton'
             onClick={() => setModal(true)}
           >
             <div style={{ display: 'flex', gap: '.3em', alignItems: 'center' }}>
               <img src={wallet.wallet?.adapter.icon} height="15px" />
               {truncateString(address.toBase58(), 2)}
             </div>
-          </GambaUi.Button>
+          </button>
         ) : (
-          <GambaUi.Button
+          <button className='styledButton'
             onClick={() => setModal(true)}
           >
             <div style={{ display: 'flex', gap: '.5em', alignItems: 'center' }}>
               <img src={wallet.wallet?.adapter.icon} height="20px" />
               {truncateString(address.toBase58(), 3)}
             </div>
-          </GambaUi.Button>
+          </button>
         )}
       </div>
     </>
@@ -65,9 +65,9 @@ export function UserButton() {
   return (
     <>
       {wallet.connected ? <ConnectedButton /> : (
-        <GambaUi.Button onClick={connect}>
+         <button className='styledButton' onClick={connect}>
           {wallet.connecting ? 'Connecting' : 'Connect'}
-        </GambaUi.Button>
+         </button>
       )}
     </>
   )
