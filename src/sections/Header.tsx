@@ -13,7 +13,7 @@ const Bonus = styled.button`
   border-radius: 10px;
   background: #03ffa4;
   padding: 2px 10px;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
   transition: background .2s;
@@ -78,7 +78,7 @@ export default function Header() {
       {jackpotHelp && (
         <Modal onClose={() => setJackpotHelp(false)}>
           <h1>🏆 Jackpot</h1>
-          <p>There{'\''}s <TokenValue amount={pool.jackpotBalance} /> in the Jackpot.The Jackpot accumulates everytime a bet is made,every coin has its own Jackpot and you have a chance to get it wherever you make a new bet. Good Luck ! 🍀</p>
+          <p>There{'\''}s <span style={{ color: '#03ffa4' }}><TokenValue amount={pool.jackpotBalance} /></span> in the Jackpot. The Jackpot accumulates everytime a bet is made,every coin has its own Jackpot and you have a chance to get it wherever you make a new bet. Good Luck ! 🍀</p>
         </Modal>
       )}
       <StyledHeader>
