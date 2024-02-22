@@ -8,6 +8,7 @@ const StyledToken = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 5px !important;
   img {
     height: 20px;
   }
@@ -25,7 +26,7 @@ const StyledTokenButton = styled.button`
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 5px;
 `
 
 export default function TokenSelect() {
