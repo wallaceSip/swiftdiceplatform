@@ -45,7 +45,7 @@ const StyledHeader = styled.div`
 
 const Logo = styled(NavLink)`
   height: 55px;
-  margin: 0 10px;
+  margin: auto;
 
   & > img {
     height: 100%;
@@ -56,6 +56,7 @@ const Row = styled.div`
   display: flex;
   gap: 6px;
   align-items: center;
+  margin: auto;
 `
 
 export default function Header() {
