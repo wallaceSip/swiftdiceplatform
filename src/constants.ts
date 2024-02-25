@@ -13,7 +13,15 @@ export const PLATFORM_SHARABLE_URL = 'swiftdice.com'
 // List of tokens supported by this platform
 export const TOKENS: TokenMeta[] = [
   GambaStandardTokens.sol,
-  GambaStandardTokens.usdc
+  GambaStandardTokens.usdc,
+  {
+    mint: new PublicKey("FtgGSFADXBtroxq8VCausXRr2of47QBf5AS1NtZCu4GD"),
+    symbol: 'BRZ',
+    name: 'Brazilian Digital',
+    image: "./tokens/brz.webp",
+    decimals: 4,
+    baseWager: 1 * 1e4,
+  }
   // {
   //   mint: new PublicKey(""),
   //   symbol: '???',
