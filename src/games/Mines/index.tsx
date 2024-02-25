@@ -5,6 +5,7 @@ import React from 'react'
 import { GRID_SIZE, MINE_SELECT, PITCH_INCREASE_FACTOR, SOUND_EXPLODE, SOUND_FINISH, SOUND_STEP, SOUND_TICK, SOUND_WIN } from './constants'
 import { CellButton, Container, Container2, Grid, Level, Levels, StatusBar,margintop } from './styles'
 import { generateGrid, revealAllMines, revealGold } from './utils'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   display: grid;
