@@ -3,7 +3,16 @@ import { useGamba } from 'gamba-react-v2'
 import React from 'react'
 import { MAX_CARD_SHOWN, RANKS, RANK_SYMBOLS, SOUND_CARD, SOUND_FINISH, SOUND_LOSE, SOUND_PLAY, SOUND_WIN } from './constants'
 import { Card, CardContainer, CardPreview, CardsContainer, Container, Option, Options, Profit } from './styles'
+import styled from 'styled-components'
 
+const Wrapper = styled.div`
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  color: white;
+`
 const BPS_PER_WHOLE = 10000
 
 const randomRank = () => 1 + Math.floor(Math.random() * (RANKS - 1))
@@ -160,7 +169,7 @@ export default function HiLo(props: HiLoConfig) {
                   onMouseLeave={() => hoverOption(undefined)}
                 >
                   <div>
-                  <span style={{ color: 'green' }}>&#x2B06;</span> {/* Green arrow up */}
+                    <span style={{ color: 'green' }}>&#x2B06;</span> {/* Green arrow up */}
                   </div>
                   <div className='notranslate'>HI - ({Math.max(...betHi).toFixed(2)}x)</div>
                 </Option>
@@ -171,7 +180,7 @@ export default function HiLo(props: HiLoConfig) {
                   onMouseLeave={() => hoverOption(undefined)}
                 >
                   <div>
-                  <span style={{ color: 'red' }}>&#x2B07;</span> {/* Red arrow down */}
+                    <span style={{ color: 'red' }}>&#x2B07;</span> {/* Red arrow down */}
                   </div>
                   <div className='notranslate'>LO - ({Math.max(...betLo).toFixed(2)}x)</div>
                 </Option>
@@ -198,10 +207,13 @@ export default function HiLo(props: HiLoConfig) {
       <GambaUi.Portal target="controls">
         {!profit ? (
           <>
-            <GambaUi.WagerInput
-              value={initialWager}
-              onChange={setInitialWager}
-            />
+            <Wrapper className='notranslate' >
+              <GambaUi.WagerInput
+                value={initialWager}
+                onChange={setInitialWager}
+              />
+            </Wrapper>
+
             <GambaUi.PlayButton disabled={!option || initialWager > maxWagerForBet} onClick={play}>
               <span className='notranslate'>Deal card</span>
             </GambaUi.PlayButton>
@@ -218,7 +230,7 @@ export default function HiLo(props: HiLoConfig) {
               Finish
             </GambaUi.Button>
             <GambaUi.PlayButton disabled={!option} onClick={play}>
-            <span className='notranslate'>Deal card</span>
+              <span className='notranslate'>Deal card</span>
             </GambaUi.PlayButton>
           </>
         )}

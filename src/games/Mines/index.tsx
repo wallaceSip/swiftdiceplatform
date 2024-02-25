@@ -6,6 +6,15 @@ import { GRID_SIZE, MINE_SELECT, PITCH_INCREASE_FACTOR, SOUND_EXPLODE, SOUND_FIN
 import { CellButton, Container, Container2, Grid, Level, Levels, StatusBar,margintop } from './styles'
 import { generateGrid, revealAllMines, revealGold } from './utils'
 
+const Wrapper = styled.div`
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  color: white;
+`
+
 function Mines() {
   const game = GambaUi.useGame()
   const gamba = useGamba()
@@ -190,6 +199,7 @@ function Mines() {
       <GambaUi.Portal target="controls">
         {!started ? (
           <>
+            <Wrapper className='notranslate'>
             <GambaUi.WagerInput value={initialWager} onChange={setInitialWager} />
             <GambaUi.Select
               options={MINE_SELECT}
@@ -199,6 +209,7 @@ function Mines() {
                 <>{mines} Mines</>
               )}
             />
+            </Wrapper>
             <GambaUi.PlayButton onClick={start}>
               Start
             </GambaUi.PlayButton>

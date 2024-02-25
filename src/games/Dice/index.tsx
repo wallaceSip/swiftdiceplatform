@@ -5,8 +5,18 @@ import React from 'react'
 import Slider from './Slider'
 import { SOUND_LOSE, SOUND_PLAY, SOUND_TICK, SOUND_WIN } from './constants'
 import { Container, Result, RollUnder, Stats } from './styles'
+import styled from 'styled-components'
 
 const DICE_SIDES = 100
+
+const Wrapper = styled.div`
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  color: white;
+`
 
 export const outcomes = (
   length: number,
@@ -133,10 +143,12 @@ export default function Dice() {
         </GambaUi.Responsive>
       </GambaUi.Portal>
       <GambaUi.Portal target="controls">
-        <GambaUi.WagerInput
-          value={wager}
-          onChange={setWager}
-        />
+        <Wrapper className='notranslate' >
+          <GambaUi.WagerInput
+            value={wager}
+            onChange={setWager}
+          />
+        </Wrapper>
         <GambaUi.PlayButton onClick={play}>
           Roll
         </GambaUi.PlayButton>

@@ -21,6 +21,16 @@ import {
   SlotItem,
 } from './constants'
 import { generateBetArray, getSlotCombination } from './utils'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  color: white;
+`
 
 const Messages: React.FC<{messages: string[]}> = ({ messages }) => {
   const [messageIndex, setMessageIndex] = React.useState(0)
@@ -147,7 +157,7 @@ export default function Slots() {
         {/* {true && <EffectTest src={combination[0].image} />} */}
         <GambaUi.Responsive>
           <StyledSlots>
-            <div>
+            <div className='notranslate'>
               <ItemPreview betArray={bet} />
               <div className={'slots'}>
                 {combination.map((slot, i) => (
@@ -190,7 +200,12 @@ export default function Slots() {
         </GambaUi.Responsive>
       </GambaUi.Portal>
       <GambaUi.Portal target="controls">
-        <GambaUi.WagerInput value={wager} onChange={setWager} />
+      <Wrapper className='notranslate' >
+          <GambaUi.WagerInput
+            value={wager}
+            onChange={setWager}
+          />
+        </Wrapper>
         <GambaUi.PlayButton disabled={!valid} onClick={play}>
           Spin
         </GambaUi.PlayButton>
