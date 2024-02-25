@@ -200,7 +200,7 @@ export default function Plinko() {
       </GambaUi.Portal>
       <GambaUi.Portal target="controls">
         <GambaUi.WagerInput value={wager} onChange={setWager} />
-        <div className='no translate'>Degen:</div>
+        <div className='notranslate'>Degen:</div>
         <GambaUi.Switch
           disabled={gamba.isPlaying}
           checked={degen}

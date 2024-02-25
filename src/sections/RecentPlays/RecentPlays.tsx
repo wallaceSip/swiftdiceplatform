@@ -39,7 +39,7 @@ function RecentPlay({ event }: {event: GambaTransaction<'GameSettled'>}) {
     <>
       <img src={game?.meta.image} style={{ height: '1.5em' }} />
       <div style={{ color: '#a079ff' }}>
-      <span className='no translate'>{data.user.toBase58().substring(0, 4)}...</span>
+      <span className='notranslate'>{data.user.toBase58().substring(0, 4)}...</span>
       </div>
       {md && (profit >= 0 ? ' won ' : ' lost ')}
       <Profit $win={profit > 0}>
