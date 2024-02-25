@@ -72,14 +72,14 @@ export default function Header() {
         <Modal onClose={() => setBonusHelp(false)}>
           <h1>You have a bonus!</h1>
           <p>
-            You have <b><TokenValue amount={balance.bonusBalance} /></b> worth of free plays. This bonus will be applied automatically when you play.
+            You have <span className='no translate'><b><TokenValue amount={balance.bonusBalance} /></b></span> worth of free plays. This bonus will be applied automatically when you play.
           </p>
         </Modal>
       )}
       {jackpotHelp && (
         <Modal onClose={() => setJackpotHelp(false)}>
           <h1>🏆 Jackpot</h1>
-          <p>There{'\''}s <span style={{ color: '#03ffa4' }}><TokenValue amount={pool.jackpotBalance} /></span> in the Jackpot. The Jackpot accumulates everytime a bet is made,every coin has its own Jackpot and you have a chance to get it wherever you make a new bet. Good Luck ! 🍀</p>
+          <p>There{'\''}s <span style={{ color: '#03ffa4' }} className='no translate'><TokenValue amount={pool.jackpotBalance} /></span> in the Jackpot. The Jackpot accumulates everytime a bet is made,every coin has its own Jackpot and you have a chance to get it wherever you make a new bet. Good Luck ! 🍀</p>
         </Modal>
       )}
       <StyledHeader>

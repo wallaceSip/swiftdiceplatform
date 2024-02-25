@@ -84,7 +84,7 @@ export default function Plinko() {
             const s = Math.min(xx, yy)
 
             ctx.clearRect(0, 0, size.width, size.height)
-            ctx.fillStyle = '#D91141'
+            ctx.fillStyle = '#0b0b13'
             ctx.fillRect(0, 0, size.width, size.height)
             ctx.save()
             ctx.translate(size.width / 2 - plinko.width / 2 * s, size.height / 2 - plinko.height / 2 * s)
@@ -200,7 +200,7 @@ export default function Plinko() {
       </GambaUi.Portal>
       <GambaUi.Portal target="controls">
         <GambaUi.WagerInput value={wager} onChange={setWager} />
-        <div>Degen:</div>
+        <div className='no translate'>Degen:</div>
         <GambaUi.Switch
           disabled={gamba.isPlaying}
           checked={degen}

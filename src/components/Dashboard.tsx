@@ -64,7 +64,7 @@ function MainPage() {
           Explorer
         </button>
         <button onClick={() => window.open('https://t.me/SwiftDice', '_blank')}>
-          Telegram
+        <span className='no translate'>Telegram</span>
         </button>
         <button onClick={() => window.open('https://x.com/SwiftDiceCom', '_blank')}>
           X.com

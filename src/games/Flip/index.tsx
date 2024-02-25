@@ -104,13 +104,16 @@ function Flip() {
         </Canvas>
       </GambaUi.Portal>
       <GambaUi.Portal target="controls">
+        <div className='no translate'>
         <GambaUi.WagerSelect
           options={WAGER_OPTIONS}
           value={wager}
           onChange={setWager}
+          
         />
+        </div>
         <GambaUi.Button disabled={gamba.isPlaying} onClick={() => setSide(side === 'heads' ? 'tails' : 'heads')}>
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: 'flex' }} className='no translate'>
             <img height="20px" src={side === 'heads' ? TEXTURE_HEADS : TEXTURE_TAILS} />
             {side === 'heads' ? 'Heads' : 'Tails' }
           </div>

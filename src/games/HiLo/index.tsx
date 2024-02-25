@@ -145,7 +145,7 @@ export default function HiLo(props: HiLoConfig) {
                       }}
                     >
                       <Card>
-                        <div className="rank">{RANK_SYMBOLS[card.rank]}</div>
+                        <div className="rank no translate">{RANK_SYMBOLS[card.rank]}</div>
                         <div className="suit" style={{ backgroundImage: 'url(' + props.logo + ')' }} />
                       </Card>
                     </CardContainer>
@@ -162,7 +162,7 @@ export default function HiLo(props: HiLoConfig) {
                   <div>
                   <span style={{ color: 'green' }}>&#x2B06;</span> {/* Green arrow up */}
                   </div>
-                  <div>HI - ({Math.max(...betHi).toFixed(2)}x)</div>
+                  <div className='no translate'>HI - ({Math.max(...betHi).toFixed(2)}x)</div>
                 </Option>
                 <Option
                   selected={option === 'lo'}
@@ -173,7 +173,7 @@ export default function HiLo(props: HiLoConfig) {
                   <div>
                   <span style={{ color: 'red' }}>&#x2B07;</span> {/* Red arrow down */}
                   </div>
-                  <div>LO - ({Math.max(...betLo).toFixed(2)}x)</div>
+                  <div className='no translate'>LO - ({Math.max(...betLo).toFixed(2)}x)</div>
                 </Option>
               </Options>
             </div>
@@ -182,7 +182,7 @@ export default function HiLo(props: HiLoConfig) {
                 const opacity = bet[rankIndex] > 0 ? .9 : .5
                 return (
                   <Card key={rankIndex} $small style={{ opacity }} onClick={() => addCard(rankIndex)}>
-                    <div className="rank">{RANK_SYMBOLS[rankIndex]}</div>
+                    <div className="rank no translate">{RANK_SYMBOLS[rankIndex]}</div>
                   </Card>
                 )
               })}
@@ -203,7 +203,7 @@ export default function HiLo(props: HiLoConfig) {
               onChange={setInitialWager}
             />
             <GambaUi.PlayButton disabled={!option || initialWager > maxWagerForBet} onClick={play}>
-              Deal card
+              <span className='no translate'>Deal card</span>
             </GambaUi.PlayButton>
             {initialWager > maxWagerForBet && (
               <GambaUi.Button onClick={() => setInitialWager(maxWagerForBet)}>
@@ -218,7 +218,7 @@ export default function HiLo(props: HiLoConfig) {
               Finish
             </GambaUi.Button>
             <GambaUi.PlayButton disabled={!option} onClick={play}>
-              Deal card
+            <span className='no translate'>Deal card</span>
             </GambaUi.PlayButton>
           </>
         )}
