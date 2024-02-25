@@ -84,7 +84,7 @@ export default function Dice() {
     <>
       <GambaUi.Portal target="screen">
         <GambaUi.Responsive>
-          <Container>
+          <Container className='notranslate'>
             <RollUnder>
               <div>
                 <div>{rollUnderIndex + 1}</div>

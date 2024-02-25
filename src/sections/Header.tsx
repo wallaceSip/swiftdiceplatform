@@ -82,7 +82,7 @@ export default function Header() {
           <p>There{'\''}s <span style={{ color: '#03ffa4' }} className='notranslate'><TokenValue amount={pool.jackpotBalance} /></span> in the Jackpot. The Jackpot accumulates everytime a bet is made,every coin has its own Jackpot and you have a chance to get it wherever you make a new bet. Good Luck ! 🍀</p>
         </Modal>
       )}
-      <StyledHeader>
+      <StyledHeader className='notranslate'>
         <Row>
           <Logo to="/">
               <img alt="SwiftDice desktop logo" src="/logo.svg" />

@@ -154,7 +154,7 @@ function Mines() {
                     <div>
                       LEVEL {i + 1}
                     </div>
-                    <div>
+                    <div className='notranslate'>
                       <TokenValue amount={cumProfit} />
                     </div>
                   </Level>
