@@ -152,7 +152,7 @@ function Mines() {
                 return (
                   <Level key={i} $active={currentLevel === i}>
                     <div>
-                      LEVEL {i + 1}
+                      LEVEL <span className='notranslate'>{i + 1}</span>
                     </div>
                     <div className='notranslate'>
                       <TokenValue amount={cumProfit} />
@@ -162,7 +162,7 @@ function Mines() {
               })}
           </Levels>
           <StatusBar>
-            <div>
+            <div className='notranslate'>
               <span>
                 Mines: {mines}
               </span>

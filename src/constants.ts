@@ -18,7 +18,7 @@ export const TOKENS: TokenMeta[] = [
     mint: new PublicKey("FtgGSFADXBtroxq8VCausXRr2of47QBf5AS1NtZCu4GD"),
     symbol: 'BRZ',
     name: 'Brazilian Digital',
-    image: "./tokens/brz.webp",
+    image: "https://i.ibb.co/BZLnCLP/brz.webp",
     decimals: 4,
     baseWager: 1 * 1e4,
   }

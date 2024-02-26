@@ -7,15 +7,15 @@
 	"lang": "en",
 	"scope": "/",
 	"theme_color": "#D91141",
-	"description": "",
+	"description": "Decentralized Casino on Solana With Revenue Share.",
 	"icons": [
 		{
-			"src": "/icon-512.png",
+			"src": "/iconMKT.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		},
 		{
-			"src": "/icon-192.png",
+			"src": "/iconMKT192.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		}
